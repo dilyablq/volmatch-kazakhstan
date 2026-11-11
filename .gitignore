@@ -16,3 +16,7 @@ npm-debug.log*
 # Env
 .env
 .env.*
+!.env.example
+
+# Local embedded PostgreSQL data
+.pgdata/

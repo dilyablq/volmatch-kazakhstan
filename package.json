@@ -1,0 +1,21 @@
+{
+  "name": "volmatch-kazakhstan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VolMatch – educational volunteer-matching prototype (Requirements. Business Analysis, Team 03). Not a real product or service.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "reset-db": "node server/reset-db.js",
+    "test": "node --test tests/acceptance.test.mjs",
+    "test:ui": "node tests/ui-check.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "embedded-postgres": "17.10.0-beta.17",
+    "express": "4.21.2",
+    "pg": "8.13.1"
+  },
+  "license": "MIT"
+}
