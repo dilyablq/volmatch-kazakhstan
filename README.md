@@ -9,10 +9,10 @@ Supervisor: Nurkhat Ibadildin.
 
 | Student | Group |
 |---|---|
-| Zhakzhan Alina | ITM-2402 |
 | Abylkassym Korkem | ITM-2402 |
-| Kuttybay Dilnaz | ITM-2402 |
 | Balykbay Dilnaz | ITM-2402 |
+| Kuttybay Dilnaz | ITM-2402 |
+| Zhakzhan Alina | ITM-2402 |
 
 ## Links
 
