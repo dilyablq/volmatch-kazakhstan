@@ -44,19 +44,38 @@ Roles: volunteer, organizer, moderator, administrator; access is checked on the 
 
 ## Run on localhost
 
+Anyone can run the full version on their own computer. Requirements: Node.js 18 or newer (https://nodejs.org).
+Download the project (green **Code** button → **Download ZIP**), unzip it, open a terminal in the folder and run:
+
 ```bash
 npm install
-cp .env.example .env      # set DEMO_PASSWORD
-npm start                 # http://localhost:3000
+cp .env.example .env      # Windows: copy .env.example .env
 ```
 
-`npm run reset-db` restores the seed data. `npm test` runs the acceptance tests TC-01 – TC-24
-(results in `tests/results/acceptance-results.json`).
+Open `.env` in any text editor, replace `change-me-please` with your own password (at least 8 characters) and save. Then:
 
-## Test accounts (invented)
+```bash
+npm start                 # open http://localhost:3000, stop with Ctrl+C
+```
 
-`volunteer@volmatch.demo`, `organizer@volmatch.demo`, `moderator@volmatch.demo`, `admin@volmatch.demo`.
-Password: the value of `DEMO_PASSWORD` in `.env` (not published; given to the examiner on request).
+The first start creates the database with invented data (about a minute).
+
+## Passwords
+
+- Every person who runs the project chooses their own password in `.env` (`DEMO_PASSWORD`). The `.env` file stays on
+  that computer and is never uploaded to GitHub, so no password is published.
+- This password is used by all demo accounts: `volunteer@volmatch.demo`, `organizer@volmatch.demo`,
+  `moderator@volmatch.demo`, `admin@volmatch.demo` (also `volunteer2@`, `volunteer3@`, `organizer2@`).
+- It is set on the first start. To change it later: edit `.env`, run `npm run reset-db`, then `npm start`
+  (this also restores the original data).
+- New accounts created with the sign-up form have their own password (at least 8 characters).
+- Passwords are stored only as salted scrypt hashes.
+- On the demo deployment (Netlify) the login screen fills in the demo password itself; nothing is stored on a server.
+
+## Tests
+
+`npm test` runs the acceptance tests TC-01 – TC-24 on a separate temporary database.
+Screen-level checks: `npm install --no-save playwright && npx playwright install chromium && npm run test:ui`.
 
 ## Licences
 

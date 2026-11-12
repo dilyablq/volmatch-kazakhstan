@@ -20,3 +20,6 @@ npm-debug.log*
 
 # Local embedded PostgreSQL data
 .pgdata/
+
+# Test output (created by npm test)
+tests/results/
