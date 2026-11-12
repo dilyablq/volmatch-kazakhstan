@@ -7,17 +7,23 @@ Supervisor: Nurkhat Ibadildin.
 
 ## Team
 
-| Student | Group | SRS sections |
-|---|---|---|
-| Zhakzhan Alina | ITM-2402 | 1 – 4.1 |
-| Abylkassym Korkem | ITM-2402 | 4.1 – 4.8 |
-| Kuttybay Dilnaz | ITM-2402 | 4.8 – 5.4 |
-| Balykbay Dilnaz | ITM-2402 | 5.5 – 7 |
+| Student | Group |
+|---|---|
+| Zhakzhan Alina | ITM-2402 |
+| Abylkassym Korkem | ITM-2402 |
+| Kuttybay Dilnaz | ITM-2402 |
+| Balykbay Dilnaz | ITM-2402 |
 
 ## Links
 
 - Demo video: *to be added*
-- Demo deployment (demo mode, no server): https://volmatch-kazakhstan.netlify.app
+- Demo deployment: https://volmatch-kazakhstan.netlify.app
+
+## Full mode and demo mode
+
+The prototype works fully only with the backend (`npm start`, see below): accounts, events, registrations and hours are
+stored in PostgreSQL and shared between all users. Without the server (for example on Netlify) the page is a visual
+demo only: data stay in one browser and nothing is saved on a server.
 
 ## Requirements coverage (IDs from the SRS)
 
