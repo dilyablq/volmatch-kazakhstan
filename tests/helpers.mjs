@@ -4,9 +4,11 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const PASSWORD = 'demo1234';
+// A new random password for every test run (the tests use their own temporary database).
+export const PASSWORD = 'T' + crypto.randomBytes(9).toString('hex');
 
 export async function startServer({ port = 3999, pgPort = 54339 } = {}) {
   const dataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'volmatch-test-'));
