@@ -1,0 +1,111 @@
+{
+  "TC-01": {
+    "pass": true,
+    "actual": "HTTP 201; account created with role volunteer; signed in at once"
+  },
+  "TC-02": {
+    "pass": true,
+    "actual": "HTTP 409 “This e-mail is already registered.”; 1 account with this e-mail"
+  },
+  "TC-03": {
+    "pass": true,
+    "actual": "Role change HTTP 403, settings HTTP 403, no session HTTP 401; role still volunteer"
+  },
+  "TC-05": {
+    "pass": true,
+    "actual": "Missing title: HTTP 400, nothing saved; valid form: HTTP 201, status approved; visible to visitors with map coordinates"
+  },
+  "TC-06": {
+    "pass": true,
+    "actual": "HTTP 403; title unchanged (“Test Tree Planting”)"
+  },
+  "TC-07": {
+    "pass": true,
+    "actual": "Free places 5 → 4; HTTP 201; registration still shown after a new sign-in"
+  },
+  "TC-08": {
+    "pass": true,
+    "actual": "HTTP 409 “You are already registered for this event.”; still one registration (4 free places)"
+  },
+  "TC-09": {
+    "pass": true,
+    "actual": "Owner: HTTP 200, attendance saved; other organizer: HTTP 403; before the start: HTTP 409"
+  },
+  "TC-10": {
+    "pass": true,
+    "actual": "Confirmed hours 3 (not 6) after two confirmations of a 3-hour event; planned hours 6 shown separately"
+  },
+  "TC-11": {
+    "pass": true,
+    "actual": "Message sent (HTTP 201) and seen by the organizer; third user: read HTTP 403, write HTTP 403; moderator without complaint: HTTP 403"
+  },
+  "TC-12": {
+    "pass": true,
+    "actual": "Status pending → approved; audit-log entry by moderator@volmatch.demo"
+  },
+  "TC-13": {
+    "pass": true,
+    "actual": "HTTP 200; profile saved with name, e-mail and age band only; no photo stored"
+  },
+  "TC-15": {
+    "pass": true,
+    "actual": "15 of 15 scores equal the weighted sum; every score above 0 has a reason; 6 low-score events still listed"
+  },
+  "TC-18": {
+    "pass": true,
+    "actual": "Request in the queue (pending); after approval: verified; audit-log entry written"
+  },
+  "TC-19": {
+    "pass": true,
+    "actual": "Users 15 by role {\"organizer\":9,\"admin\":1,\"moderator\":1,\"volunteer\":4}; events by status {\"approved\":15,\"pending\":1}; sign-ups 11; open complaints 0 — equal to the seed data"
+  },
+  "TC-20": {
+    "pass": true,
+    "actual": "HTTP 201; complaint #1 in the queue after 0.1 s"
+  },
+  "TC-21": {
+    "pass": true,
+    "actual": "Event in the saved list: true; removed: true"
+  },
+  "TC-22": {
+    "pass": true,
+    "actual": "Entries found: “approved” by moderator@volmatch.demo at 2026-11-11T19:16:27.809Z; “role_changed” by admin@volmatch.demo at 2026-11-11T19:16:28.401Z"
+  },
+  "TC-23": {
+    "pass": true,
+    "actual": "HTTP 200; registration cancelled; free places 4 → 5"
+  },
+  "TC-24": {
+    "pass": true,
+    "actual": "Ticket #1 created (HTTP 201); moderator reply HTTP 403; administrator answer HTTP 201, shown to the user; audit-log entry: true"
+  },
+  "runAt": "2026-11-11T19:16:53.409Z",
+  "TC-01-ui": {
+    "pass": true,
+    "actual": "Form submitted; signed in as volunteer; start view “dashboard”"
+  },
+  "TC-04-ui": {
+    "pass": true,
+    "actual": "2 Environment events in the next month, no other category; district filter works (2 in Yesil); keyword without match: empty-result message with “Clear filters”; after reset 13 events"
+  },
+  "TC-13-ui": {
+    "pass": true,
+    "actual": "Profile without photo shows an initials avatar (data:image/svg+xml;charset…)"
+  },
+  "TC-14-ui": {
+    "pass": true,
+    "actual": "13 markers for 13 visible events with coordinates; marker opens the event card: true; list view rows: 13"
+  },
+  "TC-15-ui": {
+    "pass": true,
+    "actual": "13 events sorted by score (80, 70, 70, 65, 65, 65, 65, 50, 50, 50, 50, 35, 20); each score above 0 shows its reason; 0 low-score events still listed"
+  },
+  "TC-16-ui": {
+    "pass": false,
+    "actual": "181 labels on screen: missing KK 0, EN 0, RU 0; dictionary: 0 of 479 keys have no KK text, 0 no EN text; message in English mode: “Добавлено в избранное”"
+  },
+  "TC-17-ui": {
+    "pass": true,
+    "actual": "No horizontal scrolling on 8 main screens at 360 px"
+  }
+}
