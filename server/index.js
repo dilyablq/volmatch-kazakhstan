@@ -11,7 +11,7 @@ import { seed } from './seed.js';
 const here = path.dirname(fileURLToPath(import.meta.url));
 loadEnv(path.resolve(here, '..', '.env'));
 const PORT = Number(process.env.PORT) || 3000;
-const DEMO_PASSWORD = process.env.DEMO_PASSWORD || 'demo1234';
+const DEMO_PASSWORD = process.env.DEMO_PASSWORD;
 const CANCEL_DEADLINE_HOURS = 24; // BR-07, FR-28
 const STAFF = ['moderator', 'admin'];
 // District centres used for the map marker of a new event (same values as the frontend form).
@@ -765,6 +765,9 @@ export function createApp() {
 }
 
 export async function start(port = PORT) {
+  if (!DEMO_PASSWORD || DEMO_PASSWORD === 'change-me-please' || DEMO_PASSWORD.length < 8) {
+    throw new Error('Set DEMO_PASSWORD in the .env file (at least 8 characters, not "change-me-please"). See README.');
+  }
   await connect();
   await seed(DEMO_PASSWORD);
   const app = createApp();
@@ -777,7 +780,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   start().then(() => {
     console.log(`VolMatch is running: http://localhost:${PORT}`);
     console.log('Educational project for the course Business Analysis, Astana IT University. Not a real product or service. All data are fictional.');
-  }).catch((e) => { console.error(e); process.exit(1); });
+  }).catch((e) => { console.error(e.message || e); process.exit(1); });
   const stop = async () => { await close(); process.exit(0); };
   process.on('SIGINT', stop);
   process.on('SIGTERM', stop);
