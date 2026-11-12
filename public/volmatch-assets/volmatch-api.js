@@ -272,6 +272,13 @@
       if (notice) notice.textContent = reg ? 'Пароль — не короче 8 символов. Он хранится на сервере только в виде хеша.' : 'Демо-аккаунты (volunteer@, organizer@, moderator@, admin@volmatch.demo) — пароль задаётся в файле .env (DEMO_PASSWORD).';
       var pass = document.getElementById('aPass');
       if (pass && reg) { pass.minLength = 8; pass.autocomplete = 'new-password'; }
+      // Full mode: clicking a demo account fills only the e-mail; the password is the one from .env.
+      Array.prototype.forEach.call(document.querySelectorAll('.hint[onclick*="aEmail"]'), function (h) {
+        var m = (h.getAttribute('onclick') || '').match(/aEmail\.value='([^']+)'/);
+        if (!m) return;
+        h.removeAttribute('onclick');
+        h.onclick = function () { aEmail.value = m[1]; if (pass) { pass.value = ''; pass.focus(); } };
+      });
       form.onsubmit = function (e) {
         e.preventDefault();
         var btn = form.querySelector('button.primary');
