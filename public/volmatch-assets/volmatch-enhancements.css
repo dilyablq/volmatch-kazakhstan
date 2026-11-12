@@ -1,0 +1,91 @@
+/* Event discovery filters */
+.event-search-row{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:10px!important;align-items:center!important;margin:0 0 10px!important}
+.event-search-row>.field{min-width:0!important;min-height:48px!important;border-radius:14px!important;padding:12px 16px!important;font-size:13px!important}
+.event-search-row .filter-toggle{min-height:48px!important;padding:0 16px!important;border-radius:14px!important;font-size:12px!important}
+.event-filter-panel{padding:14px!important;border:1px solid #dfece6!important;border-radius:16px!important;background:linear-gradient(135deg,#fff,#f9fcfa)!important;box-shadow:0 5px 18px rgba(31,82,64,.045)!important}
+.event-filter-panel .filters{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:11px!important;align-items:end!important;margin:0!important}
+.filter-control{display:grid!important;gap:5px!important;min-width:0!important;color:#526b60!important;font-size:10px!important;font-weight:750!important}
+.event-filter-panel .filter-control .field{min-height:42px!important;border-radius:11px!important;font-size:12px!important}
+.event-filter-panel .free-filter{display:flex!important;align-self:stretch!important;justify-content:flex-start!important;min-height:42px!important;padding:0 11px!important;border:1px solid #e0ebe5!important;border-radius:11px!important;background:#fff!important;color:#47675a!important;font-size:11px!important;font-weight:650!important}
+.event-filter-panel .free-filter input{width:16px!important;height:16px!important;accent-color:#16856b!important}
+.event-filter-panel .date-range{grid-column:1/-2!important;display:grid!important;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr)!important;gap:8px!important;align-items:end!important;margin:0!important;padding-top:2px!important}
+.event-filter-panel .date-range-label{grid-column:1/-1!important;color:#526b60!important;font-size:10px!important;font-weight:750!important}
+.event-filter-panel .date-range label{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;gap:7px!important;align-items:center!important;color:#71857d!important;font-size:10px!important}
+.event-filter-panel .date-range .field{min-height:40px!important;border-radius:10px!important}
+.event-filter-panel .clear-filters{justify-self:end!important;min-height:40px!important;border-radius:10px!important}
+
+/* Make event covers show the selected photo */
+.cover .event-photo{display:block;width:100%;height:100%;position:absolute;inset:0;z-index:0;object-fit:cover;object-position:center}
+.cover.photo-green,.cover.photo-orange,.cover.photo-pink,.cover.photo-yellow,.cover.photo-blue,.cover.photo-lilac{background-size:cover!important;background-position:center!important}
+
+/* Admin user management */
+#view-admin .admin-user-filters{display:grid;grid-template-columns:minmax(200px,1.3fr) minmax(140px,.8fr) minmax(140px,.8fr) auto auto;gap:9px;align-items:center;margin:12px 0 13px}
+#view-admin .admin-user-filters .field{width:100%;min-width:0;min-height:41px;border-radius:11px;font-size:11px}
+#view-admin .admin-user-count{grid-column:1/-1;color:#71857d;font-size:10px}
+#view-admin .admin-user-empty{text-align:center;color:#71857d}
+#view-admin .two{align-items:start!important}
+#view-admin .admin-panel{border-radius:18px!important}
+
+/* Organizer workbench */
+#view-organizer .two{grid-template-columns:minmax(0,1.25fr) minmax(320px,.9fr)!important;align-items:start!important;gap:16px!important}
+#view-organizer .two>.card{height:auto!important;min-height:0!important;padding:21px!important}
+#view-organizer .two>.card>h2{margin:0 0 13px!important}
+#view-organizer .org-event-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.55fr) auto;gap:8px;align-items:center;margin:0 0 12px}
+#view-organizer .org-event-toolbar .field{min-width:0;min-height:39px;border-radius:10px;font-size:11px}
+#view-organizer .org-event-total{white-space:nowrap;color:#71857d;font-size:10px;font-weight:700}
+#view-organizer .org-event-list{display:grid;gap:9px}
+#view-organizer .org-event-card{display:grid;grid-template-columns:82px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px;border:1px solid #e5eee9;border-radius:14px;background:#fff;transition:border-color .18s,box-shadow .18s}
+#view-organizer .org-event-card:hover{border-color:#bddfce;box-shadow:0 7px 18px rgba(31,82,64,.07)}
+#view-organizer .org-event-thumb{width:82px;height:72px;overflow:hidden;border-radius:11px;background:#e7f4ed}
+#view-organizer .org-event-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+#view-organizer .org-event-main{min-width:0}
+#view-organizer .org-event-title{display:flex;align-items:center;gap:8px;min-width:0}
+#view-organizer .org-event-title h3{flex:1;min-width:0;margin:0;color:#234b3e;font-size:12px;line-height:1.4}
+#view-organizer .org-event-title .badge{flex:0 0 auto}
+#view-organizer .org-event-meta{display:flex;flex-wrap:wrap;gap:4px 10px;margin:5px 0 7px;color:#71857d;font-size:10px;line-height:1.4}
+#view-organizer .org-event-progress{display:flex;align-items:center;gap:7px;color:#71857d;font-size:9px}
+#view-organizer .org-event-progress-track{width:min(110px,30%);height:5px;overflow:hidden;border-radius:99px;background:#e8f1ec}
+#view-organizer .org-event-progress-track i{display:block;height:100%;border-radius:inherit;background:#20a17c}
+#view-organizer .org-event-reason{display:block;margin-top:5px;color:#b64a5e;font-size:10px;line-height:1.4}
+#view-organizer .org-event-actions{display:grid;gap:6px;justify-items:stretch}
+#view-organizer .org-event-actions .btn{white-space:nowrap}
+#view-organizer .org-event-empty{padding:26px 18px;border:1px dashed #cfe1d7;border-radius:14px;background:#f8fcf9;text-align:center;color:#71857d}
+#view-organizer .org-event-empty strong{display:block;margin-bottom:5px;color:#315a4c;font-size:12px}
+#view-organizer .org-event-empty .btn{margin-top:10px}
+#view-organizer .organizer-disclosure .disclosure-body{padding-top:12px!important}
+#view-organizer #promoteSelect{margin:6px 0 4px}
+#view-organizer [onclick="promote()"]:disabled{opacity:.48;cursor:not-allowed;box-shadow:none}
+#view-organizer .roster-empty{padding:24px 15px!important;text-align:center!important;color:#71857d!important;line-height:1.55!important}
+
+@media(max-width:1050px){
+  #view-admin .admin-user-filters{grid-template-columns:minmax(0,1fr) minmax(130px,.55fr) minmax(130px,.55fr)}
+  #view-admin .admin-user-filters .btn{justify-self:start}
+  #view-organizer .two{grid-template-columns:minmax(0,1fr)!important}
+}
+@media(max-width:900px){
+  .event-filter-panel .filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .event-filter-panel .date-range{grid-column:1/-1!important}
+  .event-filter-panel .clear-filters{justify-self:stretch!important}
+}
+@media(max-width:740px){
+  .event-search-row{grid-template-columns:minmax(0,1fr) auto!important}
+  .event-search-row .filter-toggle{padding:0 11px!important}
+  .event-filter-panel .filters{grid-template-columns:minmax(0,1fr)!important}
+  .event-filter-panel .date-range{grid-template-columns:1fr 1fr!important}
+  .event-filter-panel .date-range-label{grid-column:1/-1!important}
+  .event-filter-panel .date-range label{grid-template-columns:auto minmax(0,1fr)!important}
+  .event-filter-panel .clear-filters{width:100%!important}
+  #view-admin .admin-user-filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  #view-admin .admin-user-filters .admin-user-search{grid-column:1/-1}
+  #view-admin .admin-user-filters .admin-export-users{grid-column:1/-1;width:100%}
+  #view-organizer .org-event-toolbar{grid-template-columns:minmax(0,1fr) auto}
+  #view-organizer .org-event-toolbar .org-event-search{grid-column:1/-1}
+  #view-organizer .org-event-card{grid-template-columns:64px minmax(0,1fr);gap:9px}
+  #view-organizer .org-event-thumb{width:64px;height:64px}
+  #view-organizer .org-event-title{align-items:flex-start;flex-direction:column;gap:4px}
+  #view-organizer .org-event-actions{grid-column:1/-1;display:flex;justify-content:flex-end;flex-wrap:wrap}
+  #view-organizer .org-event-progress-track{width:75px}
+}
+
+/* Keep faces in frame when portrait originals are taller than the avatar crop. */
+.avatar img{object-position:center 24%}
