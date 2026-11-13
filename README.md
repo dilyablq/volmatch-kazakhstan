@@ -16,7 +16,7 @@ Supervisor: Nurkhat Ibadildin.
 
 ## Links
 
-- Demo video: *to be added*
+- Demo video: [Team03_FP_Demo (SharePoint)](https://astanait-my.sharepoint.com/:v:/r/personal/240908_astanait_edu_kz/_layouts/15/stream.aspx?id=%2Fpersonal%2F240908_astanait_edu_kz%2FDocuments%2F%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%2FClipchamp%2F%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%2FAssets%2FTeam03_FP_Demo.mp4.MP4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&share=cQqOu4Zuv4uyRpqaxAU3RvtDEgUCR4fdRO0E6oceDxWiz2ZFFQ)
 - Demo deployment: https://volmatch-kazakhstan.netlify.app
 
 ## Full mode and demo mode
